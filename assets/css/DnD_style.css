@@ -4,10 +4,10 @@ body{
 
 #boite_haut{
     margin-top: 2.5vh;
-    margin-left: 25vw;
+    margin-left: 17.5vw;
     background-color: black;
     height: 5vh;
-    width: 50vw;
+    width: 65vw;
     border-radius: 10px;
 }
 
@@ -42,7 +42,7 @@ body{
 }
 
 
-.texte_gras{
+.texte_normale{
     font-size: 2.5vmin;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -92,8 +92,8 @@ body{
     height: 20vh;
     width: 25vw;
     border-radius: 5%;
+    padding: 1vw;
 }
 
 #list_mod_competences_span{
-
 }

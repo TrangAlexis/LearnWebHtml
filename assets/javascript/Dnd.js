@@ -32,7 +32,6 @@ function getMod(val){
 const force = document.getElementById("caracteristique_force")
 const forceSpan = document.getElementById("force_span")
 const modForceSpan = document.getElementById("mod_force_span")
-
 force.addEventListener('click',() => {let val_force=prompt("Valeur en force:");forceSpan.textContent=`FOR ${val_force}`;mod_force=getMod(val_force);modForceSpan.textContent=mod_force})
 
 const dexterite = document.getElementById("caracteristique_dexterite")
@@ -72,27 +71,57 @@ const boiteComp = document.getElementById("boite_mod_competences")
 let compSpan = document.getElementById("list_mod_competences_span")
 modForceSpan.addEventListener('click',() => {           boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Force<br>Sauvegarde: ${mod_force}`})
+                                                        compSpan.innerHTML = `Force<br>Sauvegarde: ${mod_force}`;
+                                                        compSpan.innerHTML += `<br>Athlétisme: ${mod_force}`;
+                                                        boiteComp.style.height = "11.5vh"
+                                                    })
 
 modDexteriteSpan.addEventListener('click',() => {       boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Dexterité<br>Sauvegarde: ${mod_dexterite}`})
+                                                        compSpan.innerHTML = `Dexterité<br>Sauvegarde: ${mod_dexterite}`;
+                                                        compSpan.innerHTML += `<br>Accrobatie: ${mod_dexterite}`;
+                                                        compSpan.innerHTML += `<br>Discrétion: ${mod_dexterite}`;
+                                                        compSpan.innerHTML += `<br>Escamotage: ${mod_dexterite}`;
+                                                        boiteComp.style.height = "17.5vh"
+                                                    })
 
 modConstitutionSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Constitution<br>Sauvegarde: ${mod_constitution}`})
+                                                        compSpan.innerHTML = `Constitution<br>Sauvegarde: ${mod_constitution}`;
+                                                        boiteComp.style.height = "8.5vh"
+                                                    })
 
 modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Intelligence<br>Sauvegarde: ${mod_intelligence}`})
+                                                        compSpan.innerHTML = `Intelligence<br>Sauvegarde: ${mod_intelligence}`;
+                                                        compSpan.innerHTML += `<br>Arcane: ${mod_intelligence}`;
+                                                        compSpan.innerHTML += `<br>Histoire: ${mod_intelligence}`;
+                                                        compSpan.innerHTML += `<br>Investigation: ${mod_intelligence}`;
+                                                        compSpan.innerHTML += `<br>Nature: ${mod_intelligence}`;
+                                                        compSpan.innerHTML += `<br>Religion: ${mod_intelligence}`;
+                                                        boiteComp.style.height = "22.5vh"
+                                                    })
 
 modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Sagesse<br>Sauvegarde: ${mod_sagesse}`})
+                                                        compSpan.innerHTML = `Sagesse<br>Sauvegarde: ${mod_sagesse}`;
+                                                        compSpan.innerHTML += `<br>Dressage: ${mod_sagesse}`;
+                                                        compSpan.innerHTML += `<br>Médecine: ${mod_sagesse}`;
+                                                        compSpan.innerHTML += `<br>Perception: ${mod_sagesse}`;
+                                                        compSpan.innerHTML += `<br>Perspicacité: ${mod_sagesse}`;
+                                                        compSpan.innerHTML += `<br>Survie: ${mod_sagesse}`;
+                                                        boiteComp.style.height = "23vh"
+                                                    })
 
 modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
-                                                        compSpan.innerHTML = `Charisme<br>Sauvegarde: ${mod_charisme}`})
+                                                        compSpan.innerHTML = `Charisme<br>Sauvegarde: ${mod_charisme}`;
+                                                        compSpan.innerHTML += `<br>Intimidation: ${mod_charisme}`
+                                                        compSpan.innerHTML += `<br>Persuasion: ${mod_charisme}`
+                                                        compSpan.innerHTML += `<br>Représentation: ${mod_charisme}`
+                                                        compSpan.innerHTML += `<br>Tromperie: ${mod_charisme}`
+                                                        
+                                                    })
 
 boiteComp.addEventListener('click',() => {              boiteComp.style.backgroundColor = 'rgba(0, 0, 0, 0)';
                                                         boiteComp.style.border = "";

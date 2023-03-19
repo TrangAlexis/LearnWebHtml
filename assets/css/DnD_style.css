@@ -29,20 +29,10 @@ body{
     margin-top: 2vh;
 }
 
-.texte_gras{
-    font-size: 2.5vmin;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 #boite_portrait{
-    height: 2px;
-    width: 25vw;
-    background-color: beige;
-    margin-top: 1vh;
-    margin-left: 40vw;
-}
-
-#portrait{
+    position: absolute;
+    top: 7.5vh;
+    left: 55vw;
     height: 40vh;
     width: 30vh;
     background-color: beige;
@@ -50,6 +40,14 @@ body{
     border-width: 2px;
     margin-top: 3vh;
 }
+
+
+.texte_gras{
+    font-size: 2.5vmin;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
 
 .infos_generale{
     display: inline-block;
@@ -67,14 +65,14 @@ body{
     border: 1px solid black;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin-top: 1vh;
+    margin-top: 2.5vh;
 }
 
 .boite_grille_caracteristiques{
-    height: auto;
+    height: 11vh;
     display: grid;
     border: 1px solid black;
-
+    
 }
 
 .mini_case{
@@ -87,3 +85,15 @@ body{
 
 
 
+#boite_mod_competences{
+    position: absolute;
+    top: 10vh;
+    left: 17.5vw;
+    height: 20vh;
+    width: 25vw;
+    border-radius: 5%;
+}
+
+#list_mod_competences_span{
+
+}

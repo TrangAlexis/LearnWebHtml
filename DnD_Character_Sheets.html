@@ -10,6 +10,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/DnD_style.css">
+    <script defer src="./assets/javascript/Dnd.js"></script>
     <title>Dnd_Character_sheet</title>
 </head>
 <body>
@@ -20,8 +21,36 @@
     </header>
     <main>
         <div id="Feuille">
-            <span>name</span>
-            <span id="boite_nom">Bob</span>
+            <div class="container">
+                <!-- PORTRAIT -->
+                <div id="boite_portrait">
+                    <div id="portrait"></div>
+                </div>
+                <!-- INFOS GENERALES -->
+                <div id="boite_infos_generale">
+                    <b class="texte_gras infos_generale" id="Nom">Nom: </b>
+                    <span class="text_remplissable" id="nom_span"></span>
+                    <br>
+                    <b class="texte_gras infos_generale" id="Classe">Classe: </b>
+                    <span class="text_remplissable" id="classe_span"></span>    
+                    <br>
+                    <b class="texte_gras infos_generale" id="Race">Race: </b>
+                    <span class="text_remplissable" id="race_span"></span>
+                    <br>
+                    <b class="texte_gras infos_generale" id="Historique">Historique: </b>
+                    <span class="text_remplissable" id="historique_span"></span>
+                    <br>
+                </div>
+
+                <!-- CARCTERISTIQUES -->
+                <div id="boite_caracteristiques">
+                    <div id="Force"></div>
+                </div>
+
+                <div>
+                    
+                </div>
+            </div>
         </div>
     </main>
     <footer></footer>

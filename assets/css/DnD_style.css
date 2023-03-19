@@ -3,29 +3,68 @@ body{
 }
 
 #boite_haut{
-    margin-top: 2em;
-    margin-left: 25%;
+    margin-top: 2.5vh;
+    margin-left: 25vw;
     background-color: black;
     height: 5vh;
-    width: 50%;
+    width: 50vw;
     border-radius: 10px;
 }
+
 #lien_accueil{
+    display: inline-block;
     color: aliceblue;
     text-decoration: none;
     font-size: x-large;
-    margin-left: 5%;
+    margin-top: 0.75vh;
+    margin-left: 3vw;
 }
 
 #Feuille{
-    height: 75em;
-    width: 65%;
+    display: inline-block;
+    height: 150vh;
+    width: 75vw;
     background-color: beige;
-    margin-left: 17.5%;
-    margin-top: 1em;
+    margin-left: 12.5%;
+    margin-top: 2vh;
 }
 
-#boite_nom{
-
-    background-color:rgb(160, 159, 157);
+.texte_gras{
+    font-size: 3vmin;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+#boite_portrait{
+    height: 2px;
+    width: 25vw;
+    background-color: beige;
+    margin-top: 1vh;
+    margin-left: 40vw;
+}
+
+#portrait{
+    height: 35vh;
+    width: 30vh;
+    background-color: beige;
+    border: solid black;
+    border-width: 2px;
+    margin-top: 3vh;
+}
+
+.infos_generale{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.text_remplissable{
+    font-size: 2.5vmin;
+}
+
+#boite_caracteristiques{
+    height: 10vh;
+    width: 38vw;
+    background-color: brown;
+}
+
+
+

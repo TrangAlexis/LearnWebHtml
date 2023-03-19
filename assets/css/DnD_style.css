@@ -30,7 +30,7 @@ body{
 }
 
 .texte_gras{
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -43,7 +43,7 @@ body{
 }
 
 #portrait{
-    height: 35vh;
+    height: 40vh;
     width: 30vh;
     background-color: beige;
     border: solid black;
@@ -60,10 +60,29 @@ body{
     font-size: 2.5vmin;
 }
 
-#boite_caracteristiques{
-    height: 10vh;
+.grid_container{
+    display: grid;
+    height: 22vh;
     width: 38vw;
-    background-color: brown;
+    border: 1px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1vh;
+}
+
+.boite_grille_caracteristiques{
+    height: auto;
+    display: grid;
+    border: 1px solid black;
+
+}
+
+.mini_case{
+    grid-column: 1/2;
+    text-align: center;
+}
+.mini_case_haut{
+    background-color: rgba(61, 61, 61, 0.329);
 }
 
 

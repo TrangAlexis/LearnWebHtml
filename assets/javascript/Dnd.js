@@ -14,6 +14,21 @@ let mod_intelligence = 0
 let mod_sagesse = 0
 let mod_charisme = 0
 
+/*Bonus*/
+let bonus_race_force = 0
+let bonus_race_dexterite = 0
+let bonus_race_constitution = 0
+let bonus_race_intelligence = 0
+let bonus_race_sagesse = 0
+let bonus_race_charisme = 0
+
+let bonus_mod_force = 0
+let bonus_mod_dexterite = 0
+let bonus_mod_constitution = 0
+let bonus_mod_intelligence = 0
+let bonus_mod_sagesse = 0
+let bonus_mod_charisme = 0
+
 /*fonction pour passer de valeur à modificateur*/
 function getMod(val){
     mod=""+Math.trunc((val-2)/2)-4
@@ -40,40 +55,39 @@ let vitesse = 0
 let liste_capacite_race = []
 
 /*NOM, RACE, ET HISTORIQUE*/
-const nom = document.getElementById("Nom")
-const nomSpan = document.getElementById("nom_span")
-nom.addEventListener('click',() => {nomSpan.textContent=prompt("Entrez nom:")})
+let nom = ""
+var inputNom = document.getElementById("input_nom")
 
-const classe = document.getElementById("Classe")
-const classeSpan = document.getElementById("classe_span")
-classe.addEventListener('click',() => {classeSpan.textContent=prompt("Entrez classe:")})
+let classeI = ""
+var inputClasseI = document.getElementById("input_classeI")
 
-const race = document.getElementById("Race")
-const raceSpan = document.getElementById("race_span")
-race.addEventListener('click',() => {raceSpan.textContent=prompt("Entrez race:")})
+let race = ""
+var inputRace = document.getElementById("input_race")
+
+
 
 /*fonction pour récupérer les bonus de race*/
 function bonus_race(Race){
     switch (Race.toLowerCase()){
         case "haut-elfe":
-            val_dexterite+=2;
-            val_intelligence+=1;
+            bonus_race_dexterite=2;
+            bonus_race_intelligence=1;
             vitesse=9;
             liste_capacite_race.push("Vision dans le noir","Sens aiguisés","Ascendance féerique","Transe","Entraînement aux armes elfiques","Sort mineur","Langue supplémentaire")
             maitr_armes.push("épées longues","épées courtes", "arcs longs","arcs courts")
             maitr_langues.push("Commun","Elfique")
             break;
         case "elfe des bois":
-            val_dexterite+=2;
-            val_sagesse+=1;
+            bonus_race_dexterite+=2;
+            bonus_race_sagesse+=1;
             vitesse=10.5;
             liste_capacite_race.push("Vision dans le noir","Sens aiguisés","Ascendance féerique","Transe","Entraînement aux armes elfiques","Foulée légère","Cachette naturelle")
             maitr_armes.push("épées longues","épées courtes", "arcs longs","arcs courts")
             break;
 
         case "drow":
-            val_dexterite+=2;
-            val_charisme+=1;
+            bonus_race_dexterite+=2;
+            bonus_race_charisme+=1;
             vitesse=9;
             liste_capacite_race.push("Vision dans le noir supérieure","Sens aiguisés","Ascendance féerique","Transe","Sensibilité au soleil", "Magie drow", "Entrainement aux armes drows");
             maitr_langues.push("Commun","Elfique");
@@ -82,10 +96,8 @@ function bonus_race(Race){
     }
 }
 
-const historique = document.getElementById("Historique")
-const historiqueSpan = document.getElementById("historique_span")
-historique.addEventListener('click',() => {historiqueSpan.textContent=prompt("Entrez historique:")})
-
+let historique = ""
+var inputHistorique = document.getElementById("input_historique")
 
 
 
@@ -94,18 +106,18 @@ historique.addEventListener('click',() => {historiqueSpan.textContent=prompt("En
 const force = document.getElementById("caracteristique_force")
 const forceSpan = document.getElementById("force_span")
 const modForceSpan = document.getElementById("mod_force_span")
-force.addEventListener('click',() => {let val_force_finale=`${parseInt(prompt("Valeur en force:"))+val_force}`;forceSpan.textContent=`FOR ${val_force_finale}`;mod_force=getMod(val_force_finale);modForceSpan.textContent=mod_force})
+force.addEventListener('click',() => {let val_force_finale=`${parseInt(prompt("Valeur en force:"))+bonus_race_force}`;forceSpan.textContent=`FOR ${val_force_finale}`;mod_force=getMod(val_force_finale);modForceSpan.textContent=mod_force})
 
 const dexterite = document.getElementById("caracteristique_dexterite")
 const dexteriteSpan = document.getElementById("dexterite_span")
 const modDexteriteSpan = document.getElementById("mod_dexterite_span")
 
-dexterite.addEventListener('click',() => {val_dexterite+=prompt("Valeur en dexterite:");dexteriteSpan.textContent=`DEX ${val_dexterite}`;mod_dexterite=getMod(val_dexterite);modDexteriteSpan.textContent=mod_dexterite})
+dexterite.addEventListener('click',() => {let val_dexterite_finale=`${parseInt(prompt("Valeur en dexterité:"))+bonus_race_dexterite}`;dexteriteSpan.textContent=`DEX ${val_dexterite_finale}`;mod_dexterite=getMod(val_dexterite_finale);modDexteriteSpan.textContent=mod_dexterite})
 
 const constitution = document.getElementById("caracteristique_constitution")
 const constitutionSpan = document.getElementById("constitution_span")
 const modConstitutionSpan = document.getElementById("mod_constitution_span")
-constitution.addEventListener('click',() => {val_constitution+=prompt("Valeur en constitution:");constitutionSpan.textContent=`CON ${val_constitution}`;mod_constitution=getMod(val_constitution);modConstitutionSpan.textContent=mod_constitution})
+constitution.addEventListener('click',() => {val_constitution=prompt("Valeur en constitution:");constitutionSpan.textContent=`CON ${val_constitution}`;mod_constitution=getMod(val_constitution);modConstitutionSpan.textContent=mod_constitution})
 
 
 const intelligence = document.getElementById("caracteristique_intelligence")
@@ -136,6 +148,7 @@ modForceSpan.addEventListener('click',() => {           boiteComp.style.backgrou
                                                         compSpan.innerHTML = `Force<br>Sauvegarde: ${mod_force}`;
                                                         compSpan.innerHTML += `<br>Athlétisme: ${mod_force}`;
                                                         boiteComp.style.height = "11.5vh"
+                                                        boiteComp.style.width = "25vw"
                                                     })
 
 modDexteriteSpan.addEventListener('click',() => {       boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -145,12 +158,14 @@ modDexteriteSpan.addEventListener('click',() => {       boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Discrétion: ${mod_dexterite}`;
                                                         compSpan.innerHTML += `<br>Escamotage: ${mod_dexterite}`;
                                                         boiteComp.style.height = "17.5vh"
+                                                        boiteComp.style.width = "25vw"
                                                     })
 
 modConstitutionSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
                                                         compSpan.innerHTML = `Constitution<br>Sauvegarde: ${mod_constitution}`;
                                                         boiteComp.style.height = "8.5vh"
+                                                        boiteComp.style.width = "25vw"
                                                     })
 
 modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -161,7 +176,8 @@ modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Investigation: ${mod_intelligence}`;
                                                         compSpan.innerHTML += `<br>Nature: ${mod_intelligence}`;
                                                         compSpan.innerHTML += `<br>Religion: ${mod_intelligence}`;
-                                                        boiteComp.style.height = "22.5vh"
+                                                        boiteComp.style.height = "20vh"
+                                                        boiteComp.style.width = "25vw"
                                                     })
 
 modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -172,7 +188,8 @@ modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Perception: ${mod_sagesse}`;
                                                         compSpan.innerHTML += `<br>Perspicacité: ${mod_sagesse}`;
                                                         compSpan.innerHTML += `<br>Survie: ${mod_sagesse}`;
-                                                        boiteComp.style.height = "23vh"
+                                                        boiteComp.style.height = "20vh"
+                                                        boiteComp.style.width = "25vw"
                                                     })
 
 modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -182,24 +199,35 @@ modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Persuasion: ${mod_charisme}`
                                                         compSpan.innerHTML += `<br>Représentation: ${mod_charisme}`
                                                         compSpan.innerHTML += `<br>Tromperie: ${mod_charisme}`
+                                                        boiteComp.style.height = "18vh"
+                                                        boiteComp.style.width = "25vw"
                                                         
                                                     })
 
 boiteComp.addEventListener('click',() => {              boiteComp.style.backgroundColor = 'rgba(0, 0, 0, 0)';
                                                         boiteComp.style.border = "";
-                                                        compSpan.innerHTML = ""})
+                                                        compSpan.innerHTML = ""
+                                                        boiteComp.style.height = "0vh"
+                                                        boiteComp.style.width = "0vw"
+                                                    })
 
 
 /*CAPACITES*/
 
 const boiteCapacitesRace = document.getElementById("boite_capacites_race")
 
-const spanTest = document.getElementById("refresh_race")
-spanTest.addEventListener('click', () => {
+const btnRefresh = document.getElementById("refresh")
+btnRefresh.addEventListener('click', () => {
+    nom=inputNom.value
+    console.log(nom)
+    race=inputRace.value
+    console.log(race)
+    historique=inputHistorique.value
+    console.log(historique)
     liste_capacite_race=[]
-    boiteCapacitesRace.innerHTML=""
-    bonus_race(raceSpan.innerHTML)
+    bonus_race(race)
 
+    boiteCapacitesRace.innerHTML=""
     for (const capacite_race of liste_capacite_race){
     boiteCapacitesRace.innerHTML+= `${capacite_race}<br>`
 }})

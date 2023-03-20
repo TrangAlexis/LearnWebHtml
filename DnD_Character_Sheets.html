@@ -22,28 +22,117 @@
         </div>
     </header>
     <main>
+        <span id="refresh">Refresh</span>
         <div id="Feuille">
-            <div class="container">
+                <!-- PV/AC/VITESSE -->
+                <div id="boite_pv_ac_vitesse">
+                    <div class="texte_normale" id="PV">PV: </div>
+                    <div class="texte_normale" id="AC">AC: </div>
+                    <div class="texte_normale" id="Vitesse">Vitesse: </div>
+                </div>
                 <!-- PORTRAIT -->
                 <div id="boite_portrait">
                     <div id="portrait"></div>
                 </div>
                 <!-- INFOS GENERALES -->
                 <div id="boite_infos_generale">
-                    <b class="texte_normale infos_generale" id="Nom">Nom: </b>
-                    <span class="text_remplissable" id="nom_span"></span>
-                    <br>
-                    <b class="texte_normale infos_generale" id="Classe">Classe: </b>
-                    <span class="text_remplissable" id="classe_span"></span>    
-                    <br>
-                    <span id="refresh_race"></span>
+                    <form class="form_infos">
+                        <b class="texte_normale infos_generale" id="Nom">Nom  : </b>
+                        <input class="input_infos_generale input-sm" type="text" id="input_nom">
+                        <br>
+                        <b class="texte_normale infos_generale" id="Race">Race: </b>
+                        <input class="input_infos_generale input-sm" type="text" id="input_race">
+                        <br>
+                        <br>
+                        <label for="classe_I" class="texte_normale" id="label_classe_I">Classe(I) :</label>
+                        <select name="classe_I" id="select_classe_I" required>
+                            <option value="">...</option>
+                            <option value="Artificier">Artificier</option>
+                            <option value="Barbare">Barbare</option>
+                            <option value="Barde">Barde</option>
+                            <option value="Clerc">Clerc</option>
+                            <option value="Druide">Druide</option>
+                            <option value="Ensorceleur">ensorceleur</option>
+                            <option value="Guerrier">Guerrier</option>
+                            <option value="Magicien">Magicien</option>
+                            <option value="Moine">Moine</option>
+                            <option value="Occultiste">Occultiste</option>
+                            <option value="Paladin">Paladin</option>
+                            <option value="Rodeur">Rôdeur</option>
+                            <option value="Roublard">Roublard</option>
+                        </select>
+                        <label for="niveau_I" id="label_niveau_I">Niv. :</label>
+                        <select name="niveau_I" id="select_niveau_I" required>
+                            <option value="0">...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select>
+                        <br>
+                        <label for="classe_II" class="texte_normale" id="label_classe_II">Classe(II):</label>
+                        <select name="classe_II" id="select_classe_II" required>
+                            <option value="">Aucune</option>
+                            <option value="Artificier">Artificier</option>
+                            <option value="Barbare">Barbare</option>
+                            <option value="Barde">Barde</option>
+                            <option value="Clerc">Clerc</option>
+                            <option value="Druide">Druide</option>
+                            <option value="Ensorceleur">ensorceleur</option>
+                            <option value="Guerrier">Guerrier</option>
+                            <option value="Magicien">Magicien</option>
+                            <option value="Moine">Moine</option>
+                            <option value="Occultiste">Occultiste</option>
+                            <option value="Paladin">Paladin</option>
+                            <option value="Rodeur">Rôdeur</option>
+                            <option value="Roublard">Roublard</option>
+                        </select>
+                        <label for="niveau_I" id="label_niveau_I">Niv. :</label>
+                        <select name="niveau_I" id="select_niveau_I" required>
+                            <option value="0">...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select>
+                        <br>
+                        <b class="texte_normale infos_generale" id="Historique">Historique: </b>
+                        <input class="input_infos_generale input-sm"t type="text" id="input_historique">
+                        <br>
+                    </form>
 
-                    <b class="texte_normale infos_generale" id="Race">Race: </b>
-                    <span class="text_remplissable" id="race_span"></span>
-                    <br>
-                    <b class="texte_normale infos_generale" id="Historique">Historique: </b>
-                    <span class="text_remplissable" id="historique_span"></span>
-                    <br>
                 </div>
 
                 <!-- CARCTERISTIQUES -->
@@ -51,29 +140,29 @@
                 <div class="grid_container" id="boite_caracteristiques">
                     <div class="boite_grille_caracteristiques" id="FORCE">
                         <div class="mini_case mini_case_haut" id="caracteristique_force"><span class="texte_normale" id="force_span">FOR</span></div>
-                        <div class="mini_case" id="modificateur_force"><span class="texte_normale" id="mod_force_span">a</span></div>
+                        <div class="mini_case" id="modificateur_force"><span class="texte_normale" id="mod_force_span">0</span></div>
                         
                     </div>
                     <div class="boite_grille_caracteristiques" id="DEXTERITE">
                         <div class="mini_case mini_case_haut" id="caracteristique_dexterite"><span class="texte_normale" id="dexterite_span">DEX</span></div>
-                        <div class="mini_case" id="modificateur_dexterite"><span class="texte_normale" id="mod_dexterite_span">a</span></div>
+                        <div class="mini_case" id="modificateur_dexterite"><span class="texte_normale" id="mod_dexterite_span">0</span></div>
                         
                     </div>
                     <div class="boite_grille_caracteristiques" id="CONSTITUTION">
                             <div class="mini_case mini_case_haut" id="caracteristique_constitution"><span class="texte_normale" id="constitution_span">CON</span></div>
-                            <div class="mini_case" id="modificateur_constitution"><span class="texte_normale" id="mod_constitution_span">a</span></div>
+                            <div class="mini_case" id="modificateur_constitution"><span class="texte_normale" id="mod_constitution_span">0</span></div>
                     </div>
                     <div class="boite_grille_caracteristiques" id="INTELLIGENCE">
                             <div class="mini_case mini_case_haut" id="caracteristique_intelligence"><span class="texte_normale" id="intelligence_span">INT</span></div>
-                            <div class="mini_case" id="modificateur_intelligence"><span class="texte_normale" id="mod_intelligence_span">a</span></div>
+                            <div class="mini_case" id="modificateur_intelligence"><span class="texte_normale" id="mod_intelligence_span">0</span></div>
                     </div>
                     <div class="boite_grille_caracteristiques" id="SAGESSE">
                             <div class="mini_case mini_case_haut" id="caracteristique_sagesse"><span class="texte_normale" id="sagesse_span">SAG</span></div>
-                            <div class="mini_case" id="modificateur_sagesse"><span class="texte_normale" id="mod_sagesse_span">a</span></div>
+                            <div class="mini_case" id="modificateur_sagesse"><span class="texte_normale" id="mod_sagesse_span">0</span></div>
                     </div>
                     <div class="boite_grille_caracteristiques" id="CHARISME">
                             <div class="mini_case mini_case_haut" id="caracteristique_charisme"><span class="texte_normale" id="charisme_span">CHA</span></div>
-                            <div class="mini_case" id="modificateur_charisme"><span class="texte_normale" id="mod_charisme_span">a</span></div>
+                            <div class="mini_case" id="modificateur_charisme"><span class="texte_normale" id="mod_charisme_span">0</span></div>
                     </div>
                 </div>
 
@@ -91,7 +180,7 @@
 
                 <!-- test -->
                 
-            </div>
+            
         </div>
     </main>
     <footer></footer>

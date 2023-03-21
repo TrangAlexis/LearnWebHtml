@@ -10,7 +10,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
     crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/DnD_style.css">
-    <script defer src="./assets/javascript/Dnd.js"></script>
+    <script defer src="./assets/javascript/Dnd_Character_Sheets_Creation.js"></script>
     <title>Dnd_Character_sheet</title>
 </head>
 <body>
@@ -40,8 +40,38 @@
                         <b class="texte_normale infos_generale" id="Nom">Nom  : </b>
                         <input class="input_infos_generale input-sm" type="text" id="input_nom">
                         <br>
-                        <b class="texte_normale infos_generale" id="Race">Race: </b>
-                        <input class="input_infos_generale input-sm" type="text" id="input_race">
+                        <label for="race" class="texte_normale" id="label_race">Race:</label>
+                        <select name="race" id="select_race" required>
+                            <option value="">...</option>
+                            <option value="haut-elfe">Elfe (haut-elfe)</option>
+                            <option value="elfe des bois">Elfe (elfe des bois)</option>
+                            <option value="drow">Elfe (drow)</option>
+                            <!--
+                            <option value="halfelin pied-léger">Halfelin (pied-léger)</option>
+                            <option value="halfelin robuste">Halfelin (robuste)</option>
+                            <option value="humain">Humain</option>
+                            <option value="nain des collines">Nain (des collines)</option>
+                            <option value="nain des montagnes">Nain (des montagnes)</option>
+                            <option value="demi-elfe">Demi-elfe</option>
+                            <option value="demi-orc">Demi-orc</option>
+                            <option value="drakeide blanc">Drakéide (blanc)</option>
+                            <option value="drakeide bleu">Drakéide (bleu)</option>
+                            <option value="drakeide noir">Drakéide (noir)</option>
+                            <option value="drakeide rouge">Drakéide (rouge)</option>
+                            <option value="drakeide vert">Drakéide (vert)</option>
+                            <option value="drakeide airain">Drakéide (airain)</option>
+                            <option value="drakeide argent">Drakéide (argent)</option>
+                            <option value="drakeide bronze">Drakéide (bronze)</option>
+                            <option value="drakeide cuivre">Drakéide (cuivre)</option>
+                            <option value="drakeide or">Drakéide (or)</option>
+                            <option value="gnome des forêts">Gnome (forêts)</option>
+                            <option value="gnome des roches">Gnome (roches)</option>
+                            <option value="gnome des profondeurs">Gnome (profondeurs)</option>
+                            <option value="tieffelin">Tieffelin</option>
+                            <option value="aarakocra">Aarakocra</option>
+                            <option value="genasi">Génasi</option>-->
+                            <option value="goliath">Goliath</option>
+                        </select>
                         <br>
                         <br>
                         <label for="classe_I" class="texte_normale" id="label_classe_I">Classe(I) :</label>
@@ -103,8 +133,8 @@
                             <option value="Rodeur">Rôdeur</option>
                             <option value="Roublard">Roublard</option>
                         </select>
-                        <label for="niveau_I" id="label_niveau_I">Niv. :</label>
-                        <select name="niveau_I" id="select_niveau_I" required>
+                        <label for="niveau_II" id="label_niveau_II">Niv. :</label>
+                        <select name="niveau_II" id="select_niveau_II" required>
                             <option value="0">...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -128,8 +158,12 @@
                             <option value="20">20</option>
                         </select>
                         <br>
-                        <b class="texte_normale infos_generale" id="Historique">Historique: </b>
-                        <input class="input_infos_generale input-sm"t type="text" id="input_historique">
+                        <label for="historique" class="texte_normale" id="label_historique">Historique:</label>
+                        <select name="historique" id="select_historique" required>
+                            <option value="">...</option>
+                            <option value="Artiste">Artiste</option>
+
+                        </select>
                         <br>
                     </form>
 

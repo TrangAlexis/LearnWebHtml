@@ -69,6 +69,19 @@ body{
     #boite_portrait {
         display: none !important;
     }
+
+    #refresh {
+        position: fixed;
+        display: block;
+        height: 50px;
+        width: 100px;
+        background-color: aliceblue;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-top: 75vh;
+        size: 1em;
+        text-align: center;
+    }
 }
 
 .texte_normale{
@@ -132,6 +145,7 @@ body{
 }
 
 #contenaire_boite_capacites{
+    padding: 15px;
     height: 50vh;
     width: 38vw;
     border: 1px solid black;

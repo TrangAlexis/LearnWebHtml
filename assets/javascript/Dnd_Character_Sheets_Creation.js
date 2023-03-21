@@ -186,7 +186,7 @@ modForceSpan.addEventListener('click',() => {           boiteComp.style.backgrou
                                                         compSpan.innerHTML = `Force<br>Sauvegarde: ${addPlus(mod_force.bonus)}`;
                                                         compSpan.innerHTML += `<br>Athlétisme: ${addPlus(mod_force.bonus)}`;
                                                         boiteComp.style.height = "11.5vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                     })
 
 modDexteriteSpan.addEventListener('click',() => {       boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -196,14 +196,14 @@ modDexteriteSpan.addEventListener('click',() => {       boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Discrétion: ${addPlus(mod_dexterite.bonus)}`;
                                                         compSpan.innerHTML += `<br>Escamotage: ${addPlus(mod_dexterite.bonus)}`;
                                                         boiteComp.style.height = "17.5vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                     })
 
 modConstitutionSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
                                                         boiteComp.style.border = "1px solid black";
                                                         compSpan.innerHTML = `Constitution<br>Sauvegarde: ${addPlus(mod_constitution.bonus)}`;
                                                         boiteComp.style.height = "8.5vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                     })
 
 modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -215,7 +215,7 @@ modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Nature: ${addPlus(mod_intelligence.bonus)}`;
                                                         compSpan.innerHTML += `<br>Religion: ${addPlus(mod_intelligence.bonus)}`;
                                                         boiteComp.style.height = "20vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                     })
 
 modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -227,7 +227,7 @@ modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Perspicacité: ${addPlus(mod_sagesse.bonus)}`;
                                                         compSpan.innerHTML += `<br>Survie: ${addPlus(mod_sagesse.bonus)}`;
                                                         boiteComp.style.height = "20vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                     })
 
 modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgroundColor = 'rgb(245, 245, 220)';
@@ -238,7 +238,7 @@ modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Représentation: ${addPlus(mod_charisme.bonus)}`
                                                         compSpan.innerHTML += `<br>Tromperie: ${addPlus(mod_charisme.bonus)}`
                                                         boiteComp.style.height = "18vh"
-                                                        boiteComp.style.width = "25vw"
+                                                        boiteComp.style.width = "50vw"
                                                         
                                                     })
 

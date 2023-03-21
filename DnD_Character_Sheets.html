@@ -26,9 +26,18 @@
         <div id="Feuille">
                 <!-- PV/AC/VITESSE -->
                 <div id="boite_pv_ac_vitesse">
-                    <div class="texte_normale" id="PV">PV: </div>
-                    <div class="texte_normale" id="AC">AC: </div>
-                    <div class="texte_normale" id="Vitesse">Vitesse: </div>
+                    <div class="texte_normale" id="PV"> 
+                        <form class="form_PV">
+                            <span>PV: </span>
+                            <input type="text" id="input_pv">
+                        </form>
+                    </div>
+                    <div class="texte_normale" id="AC">AC: 
+                        <span id="span_AC">10</span>
+                    </div>
+                    <div class="texte_normale" id="Vitesse">Vitesse: 
+                        <span id="span_vitesse">0m.</span>
+                    </div>
                 </div>
                 <!-- PORTRAIT -->
                 <div id="boite_portrait">
@@ -46,7 +55,7 @@
                             <option value="haut-elfe">Elfe (haut-elfe)</option>
                             <option value="elfe des bois">Elfe (elfe des bois)</option>
                             <option value="drow">Elfe (drow)</option>
-                            
+                            <!--
                             <option value="halfelin pied-léger">Halfelin (pied-léger)</option>
                             <option value="halfelin robuste">Halfelin (robuste)</option>
                             <option value="humain">Humain</option>
@@ -69,7 +78,7 @@
                             <option value="gnome des profondeurs">Gnome (profondeurs)</option>
                             <option value="tieffelin">Tieffelin</option>
                             <option value="aarakocra">Aarakocra</option>
-                            <option value="genasi">Génasi</option>
+                            <option value="genasi">Génasi</option>-->
                             <option value="goliath">Goliath</option>
                         </select>
                         <br>
@@ -205,12 +214,27 @@
                     <span id="list_mod_competences_span"></span>
                 </div>
 
+                <!-- CAPACITES ET COMPETENCES -->
+                <div id="wrapper_capacites_competences">
                 <!-- CAPACITES -->
-                <div id="contenaire_boite_capacites">
-                    <div class="boite_capacites texte_normale" id="boite_capacites_race">
-                        
+                    <div id="contenaire_boite_capacites">
+                        <div class="boite_capacites texte_normale" id="boite_capacites_race">
+                            <span class="texte_normale">Capacités de race: </span>
+                        </div>
+                    </div>
+
+                    <!-- EQUIPEMENT -->
+                    <div id="contenaire_equipement">
+                        <div id="boite_equipe">
+                            <span class="texte_normale">Equipé: </span>
+                        </div>
+
+                        <div id="boite_inventaire">
+                            <span class="texte_normale">Inventaire: </span>
+                        </div>
                     </div>
                 </div>
+
 
                 <!-- test -->
                 

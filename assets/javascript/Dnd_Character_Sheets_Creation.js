@@ -214,7 +214,7 @@ modIntelligenceSpan.addEventListener('click',() => {    boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Investigation: ${addPlus(mod_intelligence.bonus)}`;
                                                         compSpan.innerHTML += `<br>Nature: ${addPlus(mod_intelligence.bonus)}`;
                                                         compSpan.innerHTML += `<br>Religion: ${addPlus(mod_intelligence.bonus)}`;
-                                                        boiteComp.style.height = "20vh"
+                                                        boiteComp.style.height = "25vh"
                                                         boiteComp.style.width = "50vw"
                                                     })
 
@@ -226,7 +226,7 @@ modSagesseSpan.addEventListener('click',() => {         boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Perception: ${addPlus(mod_sagesse.bonus)}`;
                                                         compSpan.innerHTML += `<br>Perspicacité: ${addPlus(mod_sagesse.bonus)}`;
                                                         compSpan.innerHTML += `<br>Survie: ${addPlus(mod_sagesse.bonus)}`;
-                                                        boiteComp.style.height = "20vh"
+                                                        boiteComp.style.height = "25vh"
                                                         boiteComp.style.width = "50vw"
                                                     })
 
@@ -237,7 +237,7 @@ modCharismeSpan.addEventListener('click',() => {        boiteComp.style.backgrou
                                                         compSpan.innerHTML += `<br>Persuasion: ${addPlus(mod_charisme.bonus)}`
                                                         compSpan.innerHTML += `<br>Représentation: ${addPlus(mod_charisme.bonus)}`
                                                         compSpan.innerHTML += `<br>Tromperie: ${addPlus(mod_charisme.bonus)}`
-                                                        boiteComp.style.height = "18vh"
+                                                        boiteComp.style.height = "23vh"
                                                         boiteComp.style.width = "50vw"
                                                         
                                                     })
@@ -254,6 +254,9 @@ boiteComp.addEventListener('click',() => {              boiteComp.style.backgrou
 
 const boiteCapacitesRace = document.getElementById("boite_capacites_race")
 
+
+/*REFRESH*/
+const spanVitesse = document.getElementById("span_vitesse")
 const btnRefresh = document.getElementById("refresh")
 btnRefresh.addEventListener('click', () => {
     nom=inputNom.value
@@ -275,9 +278,13 @@ btnRefresh.addEventListener('click', () => {
     liste_capacite_race=[]
     bonus_race(race)
 
+    /*affiche les capacités de race dans le cadre*/
     boiteCapacitesRace.innerHTML=""
     for (const capacite_race of liste_capacite_race){
     boiteCapacitesRace.innerHTML+= `${capacite_race}<br>`
+
+    /*affiche la vitesse*/
+    spanVitesse.textContent=vitesse+"m.";
 }})
 
 

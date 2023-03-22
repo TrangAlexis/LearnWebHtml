@@ -13,6 +13,26 @@ function addPlus(val){
     }
     return val
 }
+/*Armures et leurs CA */
+class armure{
+    constructor (nom,CA){
+        this.nom=nom;
+        this.CA=CA;
+
+    /*
+    constructor (type_armure,CA,Force,Discretion,poids,prix){
+        this.type_armure=type_armure;
+        this.CA=CA;
+        this.Force=Force;
+        this.Discretion=Discretion;
+        this.poids=poids;
+        this,prix=prix;
+        */
+    }
+}
+
+
+
 
 /*INITIALISATION*/
 /*VALEUR ET MODIFICATEURS DE CARACTERISTIQUES*/
@@ -256,7 +276,9 @@ const boiteCapacitesRace = document.getElementById("boite_capacites_race")
 
 
 /*REFRESH*/
+const spanCA =document.getElementById("span_CA")
 const spanVitesse = document.getElementById("span_vitesse")
+const selectArmure = document.getElementById("select_armure")
 const btnRefresh = document.getElementById("refresh")
 btnRefresh.addEventListener('click', () => {
     nom=inputNom.value
@@ -282,10 +304,25 @@ btnRefresh.addEventListener('click', () => {
     boiteCapacitesRace.innerHTML=""
     for (const capacite_race of liste_capacite_race){
     boiteCapacitesRace.innerHTML+= `${capacite_race}<br>`
-
+}
+    /*afficher la classe d'armure */
+    var armure_naturelle=new armure("naturelle",10);
+    var broigne=new armure("broigne",14);
+    var cotte_de_mailles=new armure("cotte_de_mailles",16);
+    var clibanion=new armure("clibanion",17);
+    var harnois=new armure("harnois",18);
+    liste_armures=[armure_naturelle,broigne,cotte_de_mailles,clibanion,harnois]
+    for (var a of liste_armures){
+        console.log(a.nom+" "+selectArmure.value)
+        if (a.nom==selectArmure.value){
+            
+            spanCA.textContent=a.CA
+        }
+    }
     /*affiche la vitesse*/
     spanVitesse.textContent=vitesse+"m.";
-}})
+
+})
 
 
 /*test zone*/

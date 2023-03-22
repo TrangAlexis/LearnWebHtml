@@ -134,7 +134,7 @@ body{
 #contenaire_boite_capacites{
     float: left;
     padding: 15px;
-    height: 50vh;
+    height: 65vh;
     width: 38vw;
     border: 1px solid black;
     margin-top: 5vh;
@@ -142,31 +142,36 @@ body{
 
 #contenaire_equipement{
     float: right;
-    height: 50vh;
+    height: 65vh;
     width: 30vw;
-    border: 1px solid black;
     margin-top: 5vh;
     margin-right: 2vh;
 }
 
-#boite_equipe{
+#boite_armure{
+    padding: 5px;
+    float: right;
+    height: 8vh;
+    width: 30vw;
+    border: 1px solid black;
+}
+
+#boite_armes{
     padding: 5px;
     float: right;
     height: 15vh;
-    width: 28vw;
+    width: 30vw;
     border: 1px solid black;
     margin-top: 1vh;
-    margin-right: 1vh;
 }
 
 #boite_inventaire{
     padding: 5px;
     float: right;
-    height: 32vh;
-    width: 28vw;
+    height: 40vh;
+    width: 30vw;
     border: 1px solid black;
     margin-top: 1vh;
-    margin-right: 1vh;
 }
 
 /*version mobile*/
@@ -190,7 +195,7 @@ body{
     }
 
     #Nom{
-        margin-top: 7vh;
+        margin-top: 10vh;
     }
 
     .grid_container{
@@ -208,5 +213,50 @@ body{
         display: grid;
         border: 1px solid black;
         
+    }
+
+
+
+
+    #contenaire_boite_capacites{
+        float: left;
+        padding: 15px;
+        height: 75vh;
+        width: 35vw;
+        border: 1px solid black;
+        margin-top: 5vh;
+    }
+
+    #contenaire_equipement{
+        float: right;
+        height: 70vh;
+        width: 30vw;
+        margin-top: 5vh;
+        margin-right: 2vh;
+    }
+    
+    #boite_armure{
+        float: right;
+        height: 10vh;
+        width: 30vw;
+        border: 1px solid black;
+    }
+    
+    #boite_armes{
+        padding: 5px;
+        float: right;
+        height: 15vh;
+        width: 30vw;
+        border: 1px solid black;
+        margin-top: 1vh;
+    }
+    
+    #boite_inventaire{
+        padding: 5px;
+        float: right;
+        height: 48vh;
+        width: 30vw;
+        border: 1px solid black;
+        margin-top: 1vh;
     }
 }

@@ -32,8 +32,8 @@
                             <input type="text" id="input_pv">
                         </form>
                     </div>
-                    <div class="texte_normale" id="AC">AC: 
-                        <span id="span_AC">10</span>
+                    <div class="texte_normale" id="CA">CA: 
+                        <span id="span_CA">10</span>
                     </div>
                     <div class="texte_normale" id="Vitesse">Vitesse: 
                         <span id="span_vitesse">0m.</span>
@@ -225,8 +225,33 @@
 
                     <!-- EQUIPEMENT -->
                     <div id="contenaire_equipement">
-                        <div id="boite_equipe">
-                            <span class="texte_normale">Equipé: </span>
+                        <div id="boite_armure">
+                            <span class="texte_normale">Armure: </span>
+                            <form action="">
+                                <select name="armure" id="select_armure" required>
+                                    <option value="naturelle">Naturelle</option>
+                                    <!--
+                                    <option value="matelassee">Matelassée</option>
+                                    <option value="cuir">Cuir</option>
+                                    <option value="cuir_cloute">Cuir clouté</option>
+                                    <option value="peaux">Peaux</option>
+                                    <option value="chemise_de_mailles">Chemise de mailles</option>
+                                    <option value="ecailles">Écailles</option>
+                                    <option value="cuirasse">Cuirasse</option>
+                                    <option value="demi_plate">Demi-plate</option>
+                                    -->
+                                    <option value="broigne">Broigne</option>
+                                    <option value="cotte_de_mailles">Cotte de mailles</option>
+                                    <option value="clibanion">Clibanion</option>
+                                    <option value="harnois">Harnois</option>
+                                </select>
+                            </form>
+
+
+                        </div>
+
+                        <div id="boite_armes">
+                            <span class="texte_normale">Armes: </span>
                         </div>
 
                         <div id="boite_inventaire">

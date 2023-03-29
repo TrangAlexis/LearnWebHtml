@@ -301,7 +301,7 @@ btnRefresh.addEventListener('click', () => {
     bonus_race(race)
 
     /*affiche les capacités de race dans le cadre*/
-    boiteCapacitesRace.innerHTML=""
+    boiteCapacitesRace.innerHTML="Capacités de race:"
     for (const capacite_race of liste_capacite_race){
     boiteCapacitesRace.innerHTML+= `${capacite_race}<br>`
 }
@@ -323,6 +323,37 @@ btnRefresh.addEventListener('click', () => {
     spanVitesse.textContent=vitesse+"m.";
 
 })
+
+
+
+/*TELECHARGE UN CSV AVEC LES INFOS DEDANS*/
+var donnees_CSV =   
+    [   val_force, val_dexterite, val_constitution,
+        val_intelligence, val_sagesse, val_charisme] 
+;  
+
+//function to download CSV file   
+function download_csv_file() {  
+
+    //define the heading for each row of the data  
+    var csv = "FORCE,DEXTERITE,CONSTITUTION,INTELLIGENCE,SAGESSE,CHARISME\n";  
+    //ajoute les valeurs
+    for (var val of donnees_CSV){
+        csv+=""+val+",";
+    }
+    csv=csv.substring(0,csv.length-1)
+    csv+="\n"
+
+  //display the created CSV data on the web browser   
+    document.write(csv);
+
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);  
+    hiddenElement.target = '_blank';  
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'Fiche_perso';  
+    hiddenElement.click();  
+}
 
 
 /*test zone*/

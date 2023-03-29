@@ -1,4 +1,4 @@
-package freeDragon.weapon;
+package freeDragon.weapons;
 
 import java.util.Objects;
 

@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
-import freeDragon.weapon.Weapon;
+import freeDragon.weapons.Weapon;
 
 public class DaoWeaponImpl implements DaoWeapon{
 

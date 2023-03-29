@@ -1,6 +1,6 @@
 package freeDragon.dao;
 
-import freeDragon.weapon.Weapon;
+import freeDragon.weapons.Weapon;
 
 public interface DaoWeapon extends DaoGeneric<Weapon, Long>{
 

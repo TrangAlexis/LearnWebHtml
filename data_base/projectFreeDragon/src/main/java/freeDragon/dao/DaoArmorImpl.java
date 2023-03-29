@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import freeDragon.armor.Armor;
+import freeDragon.armors.Armor;
 
 public class DaoArmorImpl implements DaoArmor{
 

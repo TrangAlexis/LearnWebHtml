@@ -1,4 +1,4 @@
-package freeDragon.weapon;
+package freeDragon.miscallineous;
 
 import java.util.Objects;
 
@@ -6,18 +6,19 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Dice_Throw {
-	
-	private	Integer dice_type;
 	private Integer number_of_dice;
+	private	Integer dice_type;
+	
 	
 	public Dice_Throw() {
 		
 	}
 	
-	public Dice_Throw(Integer dice_type, Integer number_of_dice) {
+	public Dice_Throw(Integer number_of_dice ,Integer dice_type) {
 		super();
-		this.dice_type = dice_type;
 		this.number_of_dice = number_of_dice;
+		this.dice_type = dice_type;
+		
 	}
 
 	public Integer getDice_type() {

@@ -1,6 +1,6 @@
 package freeDragon.dao;
 
-import freeDragon.armor.Armor;
+import freeDragon.armors.Armor;
 
 public interface DaoArmor extends DaoGeneric<Armor, Long>{
 

@@ -1,4 +1,4 @@
-package freeDragon.weapon;
+package freeDragon.weapons;
 
 import java.util.Objects;
 
@@ -6,7 +6,6 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Range_Weapon {
-	private boolean ranged_weapon=false;
 	private Integer normal_range=null;
 	private Integer max_range=null;
 	
@@ -16,7 +15,6 @@ public class Range_Weapon {
 
 	public Range_Weapon(Integer normal_range, Integer max_range) {
 		super();
-		this.ranged_weapon=true;
 		this.normal_range = normal_range;
 		this.max_range = max_range;
 	}

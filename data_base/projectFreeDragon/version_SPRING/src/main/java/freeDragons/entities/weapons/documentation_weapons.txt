@@ -1,0 +1,47 @@
+This documentation describes how the weapon data base's layout.
+
+Weapons:
+
+	id	=	A unique id is given to each weapon. It can be used to find weapons easily and discriminate between
+			weapons with relatively similar names.
+
+simple_martial	=	Describes if a weapon is simple or martial.
+
+melee_ranged	=	Describes if a weapon is usable in melee or for ranged attacks (doesn't take into account
+			the "thrown" caracteristic).
+
+name_weapon	=	The name of the weapon.
+
+french_name	=	The translation in french of the name of the weapon.
+
+damage_type	=	The type of damages the weapon deals (acid, bludgeoning, cold, fire, force, lightning,
+			necrotic, piercing, poison, psychic, radiant, slashing, thunder).
+
+silver_plated	=	States if a weapon is silver plated or not.
+
+magical		=	States if a weapon is magical or not.
+
+weight		=	The weight of the weapon in kg.
+
+finesse		=	States if a weapon has the finesse caracteristique or not.
+
+heavy		=	States if a weapon has the heavy caracteristique or not.
+
+light		=	States if a weapon has the light caracteristique or not.
+
+loading		=	States if a weapon has the loading caracteristique or not.
+
+range_weapon	=	If a weapon is a ranged weapon, states its ranged. Otherwise, this attribute is null.
+
+reach		=	States if a weapon has the reach caracteristique or not.
+
+special		=	States if a weapon has a special rule for its use and describes. Otherwise, this attribute
+			is null.
+
+thrown		=	If a weapon has the "thrown" caracteristique, states its range. Otherwise, this attribute
+			is null.
+
+two_handed	=	States if a weapon has the two_handed caracteristique or not.
+
+versatile	=	If a weapon has the versatile caracteristique, states the damages it deals when used with
+			both hands. Otherwis this attribute is null.

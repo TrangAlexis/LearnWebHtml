@@ -30,7 +30,7 @@ public class ArmorsServices {
 	
 	
 	public void deleteById(Long id) {
-		Armor checkArmor = this.findById(id);
+		this.findById(id);
 		armorsRepository.deleteById(id);
 	}
 		

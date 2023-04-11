@@ -30,7 +30,7 @@ public class WeaponsServices {
 	
 	
 	public void deleteById(Long id) {
-		Weapon checkWeapon = this.findById(id);
+		this.findById(id);
 		weaponsRepository.deleteById(id);
 	}
 		

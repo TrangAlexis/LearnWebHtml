@@ -1,7 +1,5 @@
 package freeDragons.entities.miscallineous;
 
-import javax.persistence.Embeddable;
-
 public enum Damage_Type {
 	acid("acid"),bludgeoning("bludgeoning"),cold("cold"),fire("fire"),force("force"),
 	lightning("lightning"),necrotic("necrotic"), piercing("piercing"),poison("poison"),
